@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/josh/devel/DSPLib/build",
+  "command": "/usr/bin/g++-7   -I/home/josh/devel/DSPLib/lib  -O3 -DNDEBUG   -o CMakeFiles/Filter.dir/lib/filter.cpp.o -c /home/josh/devel/DSPLib/lib/filter.cpp",
+  "file": "/home/josh/devel/DSPLib/lib/filter.cpp"
+},
+{
+  "directory": "/home/josh/devel/DSPLib/build",
+  "command": "/usr/bin/g++-7   -I/home/josh/devel/DSPLib/lib  -O3 -DNDEBUG   -o CMakeFiles/RunRadar.dir/src/main.cpp.o -c /home/josh/devel/DSPLib/src/main.cpp",
+  "file": "/home/josh/devel/DSPLib/src/main.cpp"
+},
+{
+  "directory": "/home/josh/devel/DSPLib/build",
+  "command": "/usr/bin/g++-7   -I/home/josh/devel/DSPLib/lib  -O3 -DNDEBUG   -o CMakeFiles/Doppler.dir/lib/doppler.cpp.o -c /home/josh/devel/DSPLib/lib/doppler.cpp",
+  "file": "/home/josh/devel/DSPLib/lib/doppler.cpp"
+},
+{
+  "directory": "/home/josh/devel/DSPLib/build",
+  "command": "/usr/bin/g++-7   -I/home/josh/devel/DSPLib/lib  -O3 -DNDEBUG   -o CMakeFiles/FFT.dir/lib/fft.cpp.o -c /home/josh/devel/DSPLib/lib/fft.cpp",
+  "file": "/home/josh/devel/DSPLib/lib/fft.cpp"
+},
+{
+  "directory": "/home/josh/devel/DSPLib/build",
+  "command": "/usr/bin/g++-7   -I/home/josh/devel/DSPLib/lib  -O3 -DNDEBUG   -o CMakeFiles/STFT.dir/lib/stft.cpp.o -c /home/josh/devel/DSPLib/lib/stft.cpp",
+  "file": "/home/josh/devel/DSPLib/lib/stft.cpp"
+}
+]

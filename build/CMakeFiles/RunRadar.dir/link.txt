@@ -1,0 +1,1 @@
+/usr/bin/g++-7  -O3 -DNDEBUG  -rdynamic CMakeFiles/RunRadar.dir/src/main.cpp.o  -o ../bin/RunRadar ../lib/libFFT.a ../lib/libSTFT.a ../lib/libFilter.a ../lib/libDoppler.a 

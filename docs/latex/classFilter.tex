@@ -1,0 +1,279 @@
+\hypertarget{classFilter}{}\doxysection{Filter Class Reference}
+\label{classFilter}\index{Filter@{Filter}}
+Inheritance diagram for Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classFilter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classFilter_a510de3d3b1c1ec398cd37acbd80d3eed}{bessi0}} (double x)
+\begin{DoxyCompactList}\small\item\em Estimate of the modified zero order Bessel function sourced from \href{https://www.atnf.csiro.au/computing/software/gipsy/}{\texttt{ https\+://www.\+atnf.\+csiro.\+au/computing/software/gipsy/}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFilter_a0f5c5b8c1296dc6cc2e27f773df7ef60}{bess\+\_\+2}} (double x)
+\begin{DoxyCompactList}\small\item\em Estimate of the modified zero order Bessel function sourced from \href{https://www.arc.id.au/FilterDesign.html}{\texttt{ https\+://www.\+arc.\+id.\+au/\+Filter\+Design.\+html}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classFilter_ac12ecc3ad2b05ac80543c51246c91a26}{kaiser\+Bessel\+Window\+Shape}} (int att)
+\begin{DoxyCompactList}\small\item\em Given an attenuation, this function returns the window shape factor, which determines the trade off between main-\/lobe width and side lobe level. See \href{https://en.wikipedia.org/wiki/Kaiser_window}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Kaiser\+\_\+window}}. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classFilter_a7d134c50758e9d3c81321070db6a6dc2}{sinc\+Function}} (double f\+High, double f\+Low, int fs, int len)
+\begin{DoxyCompactList}\small\item\em Returns an odd symmetrical modified sinc function of length len. Where f\+HIgh and f\+Low are cutoff frequencies. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classFilter_a5f83cb44e85faf495f7af4339fb6b922}{kaiser\+Bessel\+Filter\+Coefficients}} (int len, double att, double f\+High, double f\+Low, int fs)
+\begin{DoxyCompactList}\small\item\em Returns the time domain filter coefficients for a Kaiser-\/\+Bessel bandpass filter -\/ adapted from\+: \href{https://www.arc.id.au/FilterDesign.html}{\texttt{ https\+://www.\+arc.\+id.\+au/\+Filter\+Design.\+html}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::complex$<$ float $>$ $>$ \mbox{\hyperlink{classFilter_a19f68ce32c48a100ee0b8b2e5ca0e0de}{complex\+Kaiser\+Bessel\+Filter\+Coefficients}} (int len, double att, double f\+High, double f\+Low, int fs)
+\begin{DoxyCompactList}\small\item\em Returns the time domain filter coefficients for a Kaiser-\/\+Bessel bandpass filter -\/ adapted from\+: \href{https://www.arc.id.au/FilterDesign.html}{\texttt{ https\+://www.\+arc.\+id.\+au/\+Filter\+Design.\+html}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classFilter_aa98f96525183eae2e1132642dc08f5bf}{hamming\+Window}} (int n)
+\begin{DoxyCompactList}\small\item\em Returns an estimated n point hamming. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::complex$<$ float $>$ $>$ \mbox{\hyperlink{classFilter_a3c54e5d7e512416bcea5bfe33b545f37}{complex\+Hamming\+Window}} (int n)
+\begin{DoxyCompactList}\small\item\em Returns an estimated n point hamming. \end{DoxyCompactList}\item 
+double $\ast$ \mbox{\hyperlink{classFilter_a8efe18919f1e789de5649c4a0505f6a3}{apply\+Filter\+By\+Conv}} (double $\ast$seq, double $\ast$fil, int seq\+Len, int fil\+Len)
+\begin{DoxyCompactList}\small\item\em Convolves two signals to produce another of length len1+ len2. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::complex$<$ float $>$ $>$ \mbox{\hyperlink{classFilter_a3782695a56e664e161eb172e79bcf8a2}{apply\+Filter\+By\+Conv}} (std\+::vector$<$ std\+::complex$<$ float $>$$>$ seq, std\+::vector$<$ std\+::complex$<$ float $>$$>$ fil, int seq\+Len, int fil\+Len)
+\begin{DoxyCompactList}\small\item\em Convolves two signals to produce another of length len1+ len2. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classFilter_ac32d06130ba89ace4d30e884d7f9121e}{get\+Principle}} (std\+::vector$<$ std\+::vector$<$ float $>$$>$ inp, std\+::vector$<$ float $>$ arg)
+\begin{DoxyCompactList}\small\item\em Get the principle frequency (argmax) given a 2d \mbox{\hyperlink{classSTFT}{STFT}} and the frequency bins. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFilter_a8efe18919f1e789de5649c4a0505f6a3}\label{classFilter_a8efe18919f1e789de5649c4a0505f6a3}} 
+\index{Filter@{Filter}!applyFilterByConv@{applyFilterByConv}}
+\index{applyFilterByConv@{applyFilterByConv}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{applyFilterByConv()}{applyFilterByConv()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily double $\ast$ Filter\+::apply\+Filter\+By\+Conv (\begin{DoxyParamCaption}\item[{double $\ast$}]{seq,  }\item[{double $\ast$}]{fil,  }\item[{int}]{seq\+Len,  }\item[{int}]{fil\+Len }\end{DoxyParamCaption})}
+
+
+
+Convolves two signals to produce another of length len1+ len2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & First sequence to convolve \\
+\hline
+{\em fil} & Second sequence to convolve \\
+\hline
+{\em seq\+Len} & First sequence length \\
+\hline
+{\em fil\+Len} & Second sequence length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_a3782695a56e664e161eb172e79bcf8a2}\label{classFilter_a3782695a56e664e161eb172e79bcf8a2}} 
+\index{Filter@{Filter}!applyFilterByConv@{applyFilterByConv}}
+\index{applyFilterByConv@{applyFilterByConv}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{applyFilterByConv()}{applyFilterByConv()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::complex$<$ float $>$ $>$ Filter\+::apply\+Filter\+By\+Conv (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::complex$<$ float $>$$>$}]{seq,  }\item[{std\+::vector$<$ std\+::complex$<$ float $>$$>$}]{fil,  }\item[{int}]{seq\+Len,  }\item[{int}]{fil\+Len }\end{DoxyParamCaption})}
+
+
+
+Convolves two signals to produce another of length len1+ len2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & First sequence to convolve \\
+\hline
+{\em fil} & Second sequence to convolve \\
+\hline
+{\em seq\+Len} & First sequence length \\
+\hline
+{\em fil\+Len} & Second sequence length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::complex$<$float$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_a0f5c5b8c1296dc6cc2e27f773df7ef60}\label{classFilter_a0f5c5b8c1296dc6cc2e27f773df7ef60}} 
+\index{Filter@{Filter}!bess\_2@{bess\_2}}
+\index{bess\_2@{bess\_2}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{bess\_2()}{bess\_2()}}
+{\footnotesize\ttfamily double Filter\+::bess\+\_\+2 (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Estimate of the modified zero order Bessel function sourced from \href{https://www.arc.id.au/FilterDesign.html}{\texttt{ https\+://www.\+arc.\+id.\+au/\+Filter\+Design.\+html}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Position at which to retrieve the Bessel estimate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_a510de3d3b1c1ec398cd37acbd80d3eed}\label{classFilter_a510de3d3b1c1ec398cd37acbd80d3eed}} 
+\index{Filter@{Filter}!bessi0@{bessi0}}
+\index{bessi0@{bessi0}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{bessi0()}{bessi0()}}
+{\footnotesize\ttfamily double Filter\+::bessi0 (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Estimate of the modified zero order Bessel function sourced from \href{https://www.atnf.csiro.au/computing/software/gipsy/}{\texttt{ https\+://www.\+atnf.\+csiro.\+au/computing/software/gipsy/}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Position at which to retrieve the Bessel estimate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+Sourced from \href{https://www.atnf.csiro.au/computing/software/gipsy/}{\texttt{ https\+://www.\+atnf.\+csiro.\+au/computing/software/gipsy/}}
+
+/$\ast$ PURPOSE\+: Evaluate modified Bessel function In(x) and n=0. ~\newline
+\mbox{\Hypertarget{classFilter_a3c54e5d7e512416bcea5bfe33b545f37}\label{classFilter_a3c54e5d7e512416bcea5bfe33b545f37}} 
+\index{Filter@{Filter}!complexHammingWindow@{complexHammingWindow}}
+\index{complexHammingWindow@{complexHammingWindow}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{complexHammingWindow()}{complexHammingWindow()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::complex$<$ float $>$ $>$ Filter\+::complex\+Hamming\+Window (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Returns an estimated n point hamming. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::complex$<$float$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_a19f68ce32c48a100ee0b8b2e5ca0e0de}\label{classFilter_a19f68ce32c48a100ee0b8b2e5ca0e0de}} 
+\index{Filter@{Filter}!complexKaiserBesselFilterCoefficients@{complexKaiserBesselFilterCoefficients}}
+\index{complexKaiserBesselFilterCoefficients@{complexKaiserBesselFilterCoefficients}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{complexKaiserBesselFilterCoefficients()}{complexKaiserBesselFilterCoefficients()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::complex$<$ float $>$ $>$ Filter\+::complex\+Kaiser\+Bessel\+Filter\+Coefficients (\begin{DoxyParamCaption}\item[{int}]{len,  }\item[{double}]{att,  }\item[{double}]{f\+High,  }\item[{double}]{f\+Low,  }\item[{int}]{fs }\end{DoxyParamCaption})}
+
+
+
+Returns the time domain filter coefficients for a Kaiser-\/\+Bessel bandpass filter -\/ adapted from\+: \href{https://www.arc.id.au/FilterDesign.html}{\texttt{ https\+://www.\+arc.\+id.\+au/\+Filter\+Design.\+html}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em len} & Length of filter \\
+\hline
+{\em att} & Attenuation (dB) in side lobes \\
+\hline
+{\em f\+High} & High frequency cutoff (Hz) \\
+\hline
+{\em f\+Low} & Low frequency cutoff (Hz) \\
+\hline
+{\em fs} & Sampling frequency (Hz) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::complex$<$float$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_ac32d06130ba89ace4d30e884d7f9121e}\label{classFilter_ac32d06130ba89ace4d30e884d7f9121e}} 
+\index{Filter@{Filter}!getPrinciple@{getPrinciple}}
+\index{getPrinciple@{getPrinciple}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{getPrinciple()}{getPrinciple()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Filter\+::get\+Principle (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ float $>$$>$}]{inp,  }\item[{std\+::vector$<$ float $>$}]{arg }\end{DoxyParamCaption})}
+
+
+
+Get the principle frequency (argmax) given a 2d \mbox{\hyperlink{classSTFT}{STFT}} and the frequency bins. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inp} & 2D \mbox{\hyperlink{classSTFT}{STFT}} \\
+\hline
+{\em arg} & Frequency Bins \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_aa98f96525183eae2e1132642dc08f5bf}\label{classFilter_aa98f96525183eae2e1132642dc08f5bf}} 
+\index{Filter@{Filter}!hammingWindow@{hammingWindow}}
+\index{hammingWindow@{hammingWindow}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{hammingWindow()}{hammingWindow()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Filter\+::hamming\+Window (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Returns an estimated n point hamming. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_a5f83cb44e85faf495f7af4339fb6b922}\label{classFilter_a5f83cb44e85faf495f7af4339fb6b922}} 
+\index{Filter@{Filter}!kaiserBesselFilterCoefficients@{kaiserBesselFilterCoefficients}}
+\index{kaiserBesselFilterCoefficients@{kaiserBesselFilterCoefficients}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{kaiserBesselFilterCoefficients()}{kaiserBesselFilterCoefficients()}}
+{\footnotesize\ttfamily double $\ast$ Filter\+::kaiser\+Bessel\+Filter\+Coefficients (\begin{DoxyParamCaption}\item[{int}]{len,  }\item[{double}]{att,  }\item[{double}]{f\+High,  }\item[{double}]{f\+Low,  }\item[{int}]{fs }\end{DoxyParamCaption})}
+
+
+
+Returns the time domain filter coefficients for a Kaiser-\/\+Bessel bandpass filter -\/ adapted from\+: \href{https://www.arc.id.au/FilterDesign.html}{\texttt{ https\+://www.\+arc.\+id.\+au/\+Filter\+Design.\+html}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em len} & Length of filter \\
+\hline
+{\em att} & Attenuation (dB) in side lobes \\
+\hline
+{\em f\+High} & High frequency cutoff (Hz) \\
+\hline
+{\em f\+Low} & Low frequency cutoff (Hz) \\
+\hline
+{\em fs} & Sampling frequency (Hz) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ 
+\end{DoxyReturn}
+Read more\+: \href{https://en.wikipedia.org/wiki/Kaiser_window}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Kaiser\+\_\+window}}\mbox{\Hypertarget{classFilter_ac12ecc3ad2b05ac80543c51246c91a26}\label{classFilter_ac12ecc3ad2b05ac80543c51246c91a26}} 
+\index{Filter@{Filter}!kaiserBesselWindowShape@{kaiserBesselWindowShape}}
+\index{kaiserBesselWindowShape@{kaiserBesselWindowShape}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{kaiserBesselWindowShape()}{kaiserBesselWindowShape()}}
+{\footnotesize\ttfamily double Filter\+::kaiser\+Bessel\+Window\+Shape (\begin{DoxyParamCaption}\item[{int}]{att }\end{DoxyParamCaption})}
+
+
+
+Given an attenuation, this function returns the window shape factor, which determines the trade off between main-\/lobe width and side lobe level. See \href{https://en.wikipedia.org/wiki/Kaiser_window}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Kaiser\+\_\+window}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em att} & Attenuation (dB) in side lobes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFilter_a7d134c50758e9d3c81321070db6a6dc2}\label{classFilter_a7d134c50758e9d3c81321070db6a6dc2}} 
+\index{Filter@{Filter}!sincFunction@{sincFunction}}
+\index{sincFunction@{sincFunction}!Filter@{Filter}}
+\doxysubsubsection{\texorpdfstring{sincFunction()}{sincFunction()}}
+{\footnotesize\ttfamily double $\ast$ Filter\+::sinc\+Function (\begin{DoxyParamCaption}\item[{double}]{f\+High,  }\item[{double}]{f\+Low,  }\item[{int}]{fs,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Returns an odd symmetrical modified sinc function of length len. Where f\+HIgh and f\+Low are cutoff frequencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+High} & High frequency cutoff (Hz) \\
+\hline
+{\em f\+Low} & Low frequency cutoff (Hz) \\
+\hline
+{\em fs} & Sampling frequency (Hz) \\
+\hline
+{\em len} & Length of sinc function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double$\ast$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/josh/devel/\+DSPLib/lib/filter.\+h\item 
+/home/josh/devel/\+DSPLib/lib/filter.\+cpp\end{DoxyCompactItemize}

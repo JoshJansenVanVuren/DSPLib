@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libDoppler.a  CMakeFiles/Doppler.dir/lib/doppler.cpp.o
+/usr/bin/ranlib ../lib/libDoppler.a

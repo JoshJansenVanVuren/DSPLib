@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libFilter.a  CMakeFiles/Filter.dir/lib/filter.cpp.o
+/usr/bin/ranlib ../lib/libFilter.a

@@ -1,0 +1,142 @@
+\hypertarget{classSTFT}{}\doxysection{STFT Class Reference}
+\label{classSTFT}\index{STFT@{STFT}}
+Inheritance diagram for STFT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classSTFT}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSTFT_a921450c00af96d95ccaff58cb491286e}{STFT}} (int window\+Len, int sampling\+Freq, int fft\+Len, bool ignore\+Nquist, std\+::string window=\char`\"{}hamm\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classSTFT}{STFT}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSTFT_a6dc9f8ecfa62e8f62ac3587991adf4f8}{fit\+Signal}} (std\+::vector$<$ std\+::complex$<$ float $>$$>$ $\ast$signal)
+\begin{DoxyCompactList}\small\item\em This function truncates a signal of arbitrary length to a power of 2 for the \mbox{\hyperlink{classFFT}{FFT}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSTFT_ac839f925d1fe90c4fca3a3827facf5da}{compute\+STFT}} (std\+::vector$<$ std\+::complex$<$ float $>$$>$ $\ast$signal)
+\begin{DoxyCompactList}\small\item\em Computes the \mbox{\hyperlink{classSTFT}{STFT}} of a given signal. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ float $>$ $>$ $>$ \mbox{\hyperlink{classSTFT_a75037079e5aef48c6324f15738021dd9}{get\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Get the result from the \mbox{\hyperlink{classSTFT}{STFT}} computation, returns a 2d complex vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{classSTFT_acec884ce939745f4334181dfbfdbb4c0}{get\+Mag\+Result}} ()
+\begin{DoxyCompactList}\small\item\em Get the magnitude result from the \mbox{\hyperlink{classSTFT}{STFT}} computation, returns a 2d float vector. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classSTFT_a8678ec5f5ca88c246c28e44496a17e80}{get\+Freq\+Bins}} ()
+\begin{DoxyCompactList}\small\item\em Get the freq bins given the \mbox{\hyperlink{classSTFT}{STFT}} parameters. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classSTFT_ac1e23e32dc8f106559742f4d07ac182e}{get\+Time\+Bins}} ()
+\begin{DoxyCompactList}\small\item\em Get the time bins given the \mbox{\hyperlink{classSTFT}{STFT}} parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSTFT_a921450c00af96d95ccaff58cb491286e}\label{classSTFT_a921450c00af96d95ccaff58cb491286e}} 
+\index{STFT@{STFT}!STFT@{STFT}}
+\index{STFT@{STFT}!STFT@{STFT}}
+\doxysubsubsection{\texorpdfstring{STFT()}{STFT()}}
+{\footnotesize\ttfamily STFT\+::\+STFT (\begin{DoxyParamCaption}\item[{int}]{window\+Len,  }\item[{int}]{sampling\+Freq,  }\item[{int}]{fft\+Len,  }\item[{bool}]{ignore\+Nquist,  }\item[{std\+::string}]{window = {\ttfamily \char`\"{}hamm\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classSTFT}{STFT}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Len} & Length of single \mbox{\hyperlink{classFFT}{FFT}} (if larger than fft\+Len, sequence is zero padded) Must be power of two. \\
+\hline
+{\em sampling\+Freq} & Sampling frequency (Hz) \\
+\hline
+{\em fft\+Len} & Length of \mbox{\hyperlink{classFFT}{FFT}}. Must be power of two. \\
+\hline
+{\em ignore\+Nquist} & If Nquist is ignored the full spectrum is returned, otherwise spectrum is sampling\+Freq/2 \\
+\hline
+{\em window} & Type of window. \char`\"{}hamm\char`\"{} or \char`\"{}none\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSTFT_ac839f925d1fe90c4fca3a3827facf5da}\label{classSTFT_ac839f925d1fe90c4fca3a3827facf5da}} 
+\index{STFT@{STFT}!computeSTFT@{computeSTFT}}
+\index{computeSTFT@{computeSTFT}!STFT@{STFT}}
+\doxysubsubsection{\texorpdfstring{computeSTFT()}{computeSTFT()}}
+{\footnotesize\ttfamily void STFT\+::compute\+STFT (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::complex$<$ float $>$$>$ $\ast$}]{signal }\end{DoxyParamCaption})}
+
+
+
+Computes the \mbox{\hyperlink{classSTFT}{STFT}} of a given signal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSTFT_a6dc9f8ecfa62e8f62ac3587991adf4f8}\label{classSTFT_a6dc9f8ecfa62e8f62ac3587991adf4f8}} 
+\index{STFT@{STFT}!fitSignal@{fitSignal}}
+\index{fitSignal@{fitSignal}!STFT@{STFT}}
+\doxysubsubsection{\texorpdfstring{fitSignal()}{fitSignal()}}
+{\footnotesize\ttfamily void STFT\+::fit\+Signal (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::complex$<$ float $>$$>$ $\ast$}]{signal }\end{DoxyParamCaption})}
+
+
+
+This function truncates a signal of arbitrary length to a power of 2 for the \mbox{\hyperlink{classFFT}{FFT}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSTFT_a8678ec5f5ca88c246c28e44496a17e80}\label{classSTFT_a8678ec5f5ca88c246c28e44496a17e80}} 
+\index{STFT@{STFT}!getFreqBins@{getFreqBins}}
+\index{getFreqBins@{getFreqBins}!STFT@{STFT}}
+\doxysubsubsection{\texorpdfstring{getFreqBins()}{getFreqBins()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ STFT\+::get\+Freq\+Bins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the freq bins given the \mbox{\hyperlink{classSTFT}{STFT}} parameters. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSTFT_acec884ce939745f4334181dfbfdbb4c0}\label{classSTFT_acec884ce939745f4334181dfbfdbb4c0}} 
+\index{STFT@{STFT}!getMagResult@{getMagResult}}
+\index{getMagResult@{getMagResult}!STFT@{STFT}}
+\doxysubsubsection{\texorpdfstring{getMagResult()}{getMagResult()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ float $>$ $>$ STFT\+::get\+Mag\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the magnitude result from the \mbox{\hyperlink{classSTFT}{STFT}} computation, returns a 2d float vector. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::vector$<$float$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSTFT_a75037079e5aef48c6324f15738021dd9}\label{classSTFT_a75037079e5aef48c6324f15738021dd9}} 
+\index{STFT@{STFT}!getResult@{getResult}}
+\index{getResult@{getResult}!STFT@{STFT}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ float $>$ $>$ $>$ STFT\+::get\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the result from the \mbox{\hyperlink{classSTFT}{STFT}} computation, returns a 2d complex vector. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::vector$<$std\+::complex$<$float$>$$>$$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSTFT_ac1e23e32dc8f106559742f4d07ac182e}\label{classSTFT_ac1e23e32dc8f106559742f4d07ac182e}} 
+\index{STFT@{STFT}!getTimeBins@{getTimeBins}}
+\index{getTimeBins@{getTimeBins}!STFT@{STFT}}
+\doxysubsubsection{\texorpdfstring{getTimeBins()}{getTimeBins()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ STFT\+::get\+Time\+Bins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the time bins given the \mbox{\hyperlink{classSTFT}{STFT}} parameters. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/josh/devel/\+DSPLib/lib/stft.\+h\item 
+/home/josh/devel/\+DSPLib/lib/stft.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/josh/devel/DSPLib/lib/filter.cpp
+iostream
+-
+cmath
+-
+vector
+-
+filter.h
+/home/josh/devel/DSPLib/lib/filter.h
+
+/home/josh/devel/DSPLib/lib/filter.h
+complex
+-
+map
+-
+

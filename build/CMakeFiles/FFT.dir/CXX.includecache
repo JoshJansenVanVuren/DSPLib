@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/josh/devel/DSPLib/lib/fft.cpp
+iostream
+-
+complex
+-
+cmath
+-
+map
+-
+fft.h
+/home/josh/devel/DSPLib/lib/fft.h
+
+/home/josh/devel/DSPLib/lib/fft.h
+complex
+-
+vector
+-
+map
+-
+

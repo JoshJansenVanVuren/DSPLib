@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libSTFT.a  CMakeFiles/STFT.dir/lib/stft.cpp.o
+/usr/bin/ranlib ../lib/libSTFT.a

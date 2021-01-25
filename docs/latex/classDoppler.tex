@@ -1,0 +1,98 @@
+\hypertarget{classDoppler}{}\doxysection{Doppler Class Reference}
+\label{classDoppler}\index{Doppler@{Doppler}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDoppler_ad496fc7a99e7d6e0148fd593912341f5}{Doppler}} (int trans\+Freq)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classDoppler}{Doppler}} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classDoppler_afe5edd1494b5442a848aa1b28e4559dd}{measure\+Projectile\+Velocity}} (std\+::vector$<$ float $>$ received\+Freq)
+\begin{DoxyCompactList}\small\item\em Measures the velocity (m/s) of a projectile from a stationary source. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classDoppler_ada0c27df339eab203feec849e4cdb6d0}{estim\+Distance\+Travelled}} (std\+::vector$<$ float $>$ estim\+Proj\+Vel, std\+::vector$<$ float $>$ time\+Steps)
+\begin{DoxyCompactList}\small\item\em Estimates distance travelled by discretely integrating a time series of object velocities. \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classDoppler_ae4ac0e1a6133bdd44e99470282ace1ee}{measure\+Transverse\+Distance}} (std\+::vector$<$ float $>$ estim\+Proj\+Vel, std\+::vector$<$ float $>$ time\+Steps)
+\begin{DoxyCompactList}\small\item\em Estimates transverse distance between moving object and a stationary observer by using the cosine error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDoppler_ad496fc7a99e7d6e0148fd593912341f5}\label{classDoppler_ad496fc7a99e7d6e0148fd593912341f5}} 
+\index{Doppler@{Doppler}!Doppler@{Doppler}}
+\index{Doppler@{Doppler}!Doppler@{Doppler}}
+\doxysubsubsection{\texorpdfstring{Doppler()}{Doppler()}}
+{\footnotesize\ttfamily Doppler\+::\+Doppler (\begin{DoxyParamCaption}\item[{int}]{trans\+Freq }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classDoppler}{Doppler}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans\+Freq} & Known transmission frequency of \mbox{\hyperlink{classDoppler}{Doppler}} radar \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDoppler_ada0c27df339eab203feec849e4cdb6d0}\label{classDoppler_ada0c27df339eab203feec849e4cdb6d0}} 
+\index{Doppler@{Doppler}!estimDistanceTravelled@{estimDistanceTravelled}}
+\index{estimDistanceTravelled@{estimDistanceTravelled}!Doppler@{Doppler}}
+\doxysubsubsection{\texorpdfstring{estimDistanceTravelled()}{estimDistanceTravelled()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Doppler\+::estim\+Distance\+Travelled (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{estim\+Proj\+Vel,  }\item[{std\+::vector$<$ float $>$}]{time\+Steps }\end{DoxyParamCaption})}
+
+
+
+Estimates distance travelled by discretely integrating a time series of object velocities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em estim\+Proj\+Vel} & Time series of objects velocity \\
+\hline
+{\em time\+Steps} & Time series in seconds (s) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoppler_afe5edd1494b5442a848aa1b28e4559dd}\label{classDoppler_afe5edd1494b5442a848aa1b28e4559dd}} 
+\index{Doppler@{Doppler}!measureProjectileVelocity@{measureProjectileVelocity}}
+\index{measureProjectileVelocity@{measureProjectileVelocity}!Doppler@{Doppler}}
+\doxysubsubsection{\texorpdfstring{measureProjectileVelocity()}{measureProjectileVelocity()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Doppler\+::measure\+Projectile\+Velocity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{received\+Freq }\end{DoxyParamCaption})}
+
+
+
+Measures the velocity (m/s) of a projectile from a stationary source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em received\+Freq} & Time series of recieved frequencies \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoppler_ae4ac0e1a6133bdd44e99470282ace1ee}\label{classDoppler_ae4ac0e1a6133bdd44e99470282ace1ee}} 
+\index{Doppler@{Doppler}!measureTransverseDistance@{measureTransverseDistance}}
+\index{measureTransverseDistance@{measureTransverseDistance}!Doppler@{Doppler}}
+\doxysubsubsection{\texorpdfstring{measureTransverseDistance()}{measureTransverseDistance()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Doppler\+::measure\+Transverse\+Distance (\begin{DoxyParamCaption}\item[{std\+::vector$<$ float $>$}]{estim\+Proj\+Vel,  }\item[{std\+::vector$<$ float $>$}]{time\+Steps }\end{DoxyParamCaption})}
+
+
+
+Estimates transverse distance between moving object and a stationary observer by using the cosine error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em estim\+Proj\+Vel} & Time series of objects velocity \\
+\hline
+{\em time\+Steps} & Time series in seconds (s) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$float$>$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/josh/devel/\+DSPLib/lib/doppler.\+h\item 
+/home/josh/devel/\+DSPLib/lib/doppler.\+cpp\end{DoxyCompactItemize}

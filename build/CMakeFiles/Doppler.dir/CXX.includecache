@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/josh/devel/DSPLib/lib/doppler.cpp
+iostream
+-
+cmath
+-
+unordered_map
+-
+doppler.h
+/home/josh/devel/DSPLib/lib/doppler.h
+
+/home/josh/devel/DSPLib/lib/doppler.h
+vector
+-
+
